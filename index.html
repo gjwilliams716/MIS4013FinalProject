@@ -27,7 +27,10 @@
           </li>
       </ul> 
 
-<p>Call a function which performs a calculation and returns the result:</p>
+<p>Enter values for p1 and p2:</p>
+<input type="number" id="inputP1" placeholder="Enter p1">
+<input type="number" id="inputP2" placeholder="Enter p2">
+<button onclick="calculate()">Calculate</button>
 
 <p id="func1"></p>
 
@@ -36,9 +39,19 @@ function func1(p1, p2) {
   return p1 * p2;
 }
 
-let result = func1(3, 4);
-document.getElementById("func1").innerHTML = result;
-</script>  
+function calculate() {
+  let p1 = parseFloat(document.getElementById("inputP1").value);
+  let p2 = parseFloat(document.getElementById("inputP2").value);
+  
+  if (isNaN(p1) || isNaN(p2)) {
+    document.getElementById("func1").innerHTML = "Please enter valid numbers for p1 and p2.";
+  } else {
+    let result = func1(p1, p2);
+    document.getElementById("func1").innerHTML = "Result: " + result;
+  }
+}
+</script>
+
     
     <div style="margin-left:10px">Some Notable Historical Documents:</div>
   
