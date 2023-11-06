@@ -52,6 +52,30 @@ function calculate() {
 }
 </script>
 
+    <p>Enter a Fahrenheit value to convert to Celsius:</p>
+<input type="number" id="inputFahrenheit" placeholder="Enter Fahrenheit">
+<button onclick="convertToFahrenheit()">Convert</button>
+
+<p id="demo"></p>
+
+<script>
+function toCelsius(f) {
+  return (5/9) * (f - 32);
+}
+
+function convertToFahrenheit() {
+  let fahrenheit = parseFloat(document.getElementById("inputFahrenheit").value);
+  
+  if (isNaN(fahrenheit)) {
+    document.getElementById("demo").innerHTML = "Please enter a valid Fahrenheit value.";
+  } else {
+    let celsius = toCelsius(fahrenheit);
+    document.getElementById("demo").innerHTML = "Celsius: " + celsius.toFixed(2);
+  }
+}
+</script>
+
+
     
     <div style="margin-left:10px">Some Notable Historical Documents:</div>
   
