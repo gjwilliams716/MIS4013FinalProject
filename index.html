@@ -133,7 +133,24 @@ function convertTo1337Speak() {
 </script>
 
 
-    
+    <p>Enter gallons to convert to milliliters:</p>
+<input type="number" id="gallonsInput" placeholder="Enter gallons">
+<button onclick="convertGallonsToMilliliters()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function convertGallonsToMilliliters() {
+  let gallons = parseFloat(document.getElementById("gallonsInput").value);
+  
+  if (isNaN(gallons)) {
+    document.getElementById("result").innerHTML = "Please enter a valid number for gallons.";
+  } else {
+    let milliliters = gallons * 3785.41; // 1 gallon = 3785.41 milliliters
+    document.getElementById("result").innerHTML = gallons + " gallons is equal to " + milliliters.toFixed(2) + " milliliters.";
+  }
+}
+</script>
     
     
     <div style="margin-left:10px">Some Notable Historical Documents:</div>
