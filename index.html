@@ -75,7 +75,27 @@ function convertToFahrenheit() {
 }
 </script>
 
+<p>Enter miles to convert to kilometers:</p>
+<input type="number" id="milesInput" placeholder="Enter miles">
+<button onclick="convertMilesToKilometers()">Convert</button>
 
+<p id="result"></p>
+
+<script>
+function convertMilesToKilometers() {
+  let miles = parseFloat(document.getElementById("milesInput").value);
+  
+  if (isNaN(miles)) {
+    document.getElementById("result").innerHTML = "Please enter a valid number for miles.";
+  } else {
+    let kilometers = miles * 1.60934;
+    document.getElementById("result").innerHTML = miles + " miles is equal to " + kilometers.toFixed(2) + " kilometers.";
+  }
+}
+</script>
+
+
+    
     
     <div style="margin-left:10px">Some Notable Historical Documents:</div>
   
