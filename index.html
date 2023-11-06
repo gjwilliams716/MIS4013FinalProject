@@ -94,7 +94,46 @@ function convertMilesToKilometers() {
 }
 </script>
 
+<p>Enter text to convert to 1337 speak:</p>
+<input type="text" id="textInput" placeholder="Enter text">
+<button onclick="convertTo1337Speak()">Convert</button>
 
+<p id="result"></p>
+
+<script>
+function convertTo1337Speak() {
+  let inputText = document.getElementById("textInput").value;
+  let outputText = "";
+  
+  for (let i = 0; i < inputText.length; i++) {
+    let char = inputText.charAt(i).toLowerCase();
+    switch (char) {
+      case 'a':
+        outputText += '4';
+        break;
+      case 'e':
+        outputText += '3';
+        break;
+      case 'l':
+        outputText += '1';
+        break;
+      case 'o':
+        outputText += '0';
+        break;
+      case 't':
+        outputText += '7';
+        break;
+      default:
+        outputText += char;
+    }
+  }
+  
+  document.getElementById("result").innerHTML = "1337 speak: " + outputText;
+}
+</script>
+
+
+    
     
     
     <div style="margin-left:10px">Some Notable Historical Documents:</div>
