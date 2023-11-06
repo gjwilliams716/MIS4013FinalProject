@@ -98,7 +98,7 @@ function convertMilesToKilometers() {
 <input type="text" id="textInput" placeholder="Enter text">
 <button onclick="convertTo1337Speak()">Convert</button>
 
-<p id="result"></p>
+<p id="result2"></p>
 
 <script>
 function convertTo1337Speak() {
@@ -128,7 +128,7 @@ function convertTo1337Speak() {
     }
   }
   
-  document.getElementById("result").innerHTML = "1337 speak: " + outputText;
+  document.getElementById("result2").innerHTML = "1337 speak: " + outputText;
 }
 </script>
 
@@ -137,17 +137,17 @@ function convertTo1337Speak() {
 <input type="number" id="gallonsInput" placeholder="Enter gallons">
 <button onclick="convertGallonsToMilliliters()">Convert</button>
 
-<p id="result"></p>
+<p id="result3"></p>
 
 <script>
 function convertGallonsToMilliliters() {
   let gallons = parseFloat(document.getElementById("gallonsInput").value);
   
   if (isNaN(gallons)) {
-    document.getElementById("result").innerHTML = "Please enter a valid number for gallons.";
+    document.getElementById("result3").innerHTML = "Please enter a valid number for gallons.";
   } else {
     let milliliters = gallons * 3785.41; // 1 gallon = 3785.41 milliliters
-    document.getElementById("result").innerHTML = gallons + " gallons is equal to " + milliliters.toFixed(2) + " milliliters.";
+    document.getElementById("result3").innerHTML = gallons + " gallons is equal to " + milliliters.toFixed(2) + " milliliters.";
   }
 }
 </script>
