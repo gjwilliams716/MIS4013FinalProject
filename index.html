@@ -42,35 +42,39 @@
       <div id="chart"></div>
     </div>
     <div style="width:500px">
-      <div id="chart2">
-      </div>  
-    </div>
-          <script>
-         const gridmo = new Grid({
-            data: [
-                ['John', 'john@example.com', '(353) 01 222 3333'],
-                ['Mark', 'mark@gmail.com', '(01) 22 888 4444'],
-                ['Eoin', 'eo3n@yahoo.com', '(05) 10 878 5554'],
-                ['Nisen', 'nis900@gmail.com', '313 333 1923']
-            ],
-            search: true
-        });
-        const chart2Div = document.getElementById('chart2');
-        chart2Div.appendChild(gridmo.container);
-        </script>
-      
-    <div style="width:500px">
-      <div id="chart3">
-        
-      </div>
+      <div id="table-container"></div>  
     </div>
       
     <div style="width:500px">
-      <div id="chart4">
-        
-      </div>
+      <div id="chart3"></div>
+    </div>
+      
+    <div style="width:500px">
+      <div id="chart4"></div>
     </div>
   </div> 
+
+    <script>
+    // Sample data
+    const data = [
+        { name: 'John Doe', phone: '123-456-7890', email: 'john@example.com' },
+        { name: 'Jane Doe', phone: '987-654-3210', email: 'jane@example.com' },
+        // Add more data as needed
+    ];
+
+    // Define columns
+    const columns = [
+        'Name',
+        'Phone Number',
+        'Email'
+    ];
+
+    // Create the grid
+    new gridjs.Grid({
+        columns: columns.map(col => ({ name: col, id: col.toLowerCase() })),
+        data: data
+    }).render(document.getElementById('table-container'));
+</script>
 
  <script>
     const chartContainer = document.getElementById('chart');
