@@ -10,6 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> <!-- Apex Charts -->
     <script src="https://cdn.jsdelivr.net/npm/gridjs@1.4.0/dist/gridjs.production.min.js"></script> <!-- Grid JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@1.4.0/dist/theme/mermaid.min.css" />  <!-- Grid JS -->
+    <script src="https://code.highcharts.com/highcharts.js"></script> <!-- High Charts -->
+
       
   </head>
   <body style="margin:auto">
@@ -46,6 +48,77 @@
     <div style="width:1000px">
       <div id="table-container"></div>  
     </div>
+
+    <div id="library4">
+      
+    </div>
+
+    <script>
+    // Your existing code for pie chart animation
+    (function (H) {
+        H.seriesTypes.pie.prototype.animate = function (init) {
+            // ... (unchanged)
+        };
+    }(Highcharts));
+
+    // Create the pie chart
+    Highcharts.chart('library4', {
+        chart: {
+            type: 'pie'
+        },
+        title: {
+            text: 'Departamental Strength of the Company',
+            align: 'left'
+        },
+        subtitle: {
+            text: 'Custom animation of pie series',
+            align: 'left'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                borderWidth: 2,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b><br>{point.percentage}%',
+                    distance: 20
+                }
+            }
+        },
+        series: [{
+            enableMouseTracking: false,
+            animation: {
+                duration: 2000
+            },
+            colorByPoint: true,
+            data: [{
+                name: 'Customer Support',
+                y: 21.3
+            }, {
+                name: 'Development',
+                y: 18.7
+            }, {
+                name: 'Sales',
+                y: 20.2
+            }, {
+                name: 'Marketing',
+                y: 14.2
+            }, {
+                name: 'Other',
+                y: 25.6
+            }]
+        }]
+    });
+</script>
 
   <script>
     // Sample data
