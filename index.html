@@ -41,8 +41,9 @@
       <div id="chart"></div>
     </div>
     <div style="width:500px">
-      <div id="chart2"></div>
-        <script>
+      <div id="chart2">
+          <script>
+        const gridmo = document.getElementById('chart2');
           new Grid({
             data: [
               ['John', 'john@example.com', '(353) 01 222 3333'],
@@ -52,8 +53,10 @@
             ],
             search: true
           });
+              const chart2Div = document.getElementById('chart2');
+            chart2Div.appendChild(gridmo.container);
         </script>
-      
+      </div>  
     </div>
     <div style="width:500px">
       <div id="chart3">
