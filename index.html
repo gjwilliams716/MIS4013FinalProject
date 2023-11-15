@@ -51,17 +51,20 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script> <!-- Grid JS -->
 
 <script>
-const tablee = document.getElementById('chart2');
-const grid = new Grid({
-  columns: ['Name', 'Email', 'Phone Number'],
-  pagination: {
-    limit: 1
-  },
-  data: [
-    ['John', 'john@example.com', '(353) 01 222 3333'],
-    ['Mark', 'mark@gmail.com',   '(01) 22 888 4444']
-  ]
-});
+  const tableContainer = document.getElementById('chart2');
+  const grid = new Grid({
+    columns: ['Name', 'Email', 'Phone Number'],
+    pagination: {
+      limit: 1
+    },
+    data: [
+      ['John', 'john@example.com', '(353) 01 222 3333'],
+      ['Mark', 'mark@gmail.com', '(01) 22 888 4444']
+    ]
+  });
+
+  // Render the table
+  grid.render(tableContainer);
 </script>
 
  <script>
