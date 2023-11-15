@@ -51,21 +51,18 @@
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" /> <!-- Grid JS -->
 
 <script>
-  const tableContainer = document.getElementById('chart2');
-  const grid = new Grid({
-    columns: ['Name', 'Email', 'Phone Number'],
-    pagination: {
-      limit: 1
-    },
-    data: [
-      ['John', 'john@example.com', '(353) 01 222 3333'],
-      ['Mark', 'mark@gmail.com', '(01) 22 888 4444']
-    ]
-  });
+    const gridContainer = document.getElementById('chart2');
+    const grid = new Grid({
+      columns: ['Name', 'Email', 'Phone Number'],
+      data: [
+        ['John', 'john@example.com', '(353) 01 222 3333'],
+        ['Mark', 'mark@gmail.com', '(01) 22 888 4444']
+      ]
+    });
 
-  // Render the table
-  grid.render(tableContainer);
-</script>
+    // Render the grid inside the 'chart2' div
+    grid.render(gridContainer);
+  </script>
 
  <script>
     const chartContainer = document.getElementById('chart');
