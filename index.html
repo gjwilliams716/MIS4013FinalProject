@@ -36,34 +36,35 @@
       <div id="chart"></div>
     </div>
     <div style="width:500px">
-      <div id="chart2"></div>
+      <div id="chart2">
+        <script>
+          new Grid({
+            data: [
+              ['John', 'john@example.com', '(353) 01 222 3333'],
+              ['Mark', 'mark@gmail.com',   '(01) 22 888 4444'],
+              ['Eoin', 'eo3n@yahoo.com',   '(05) 10 878 5554'],
+              ['Nisen', 'nis900@gmail.com',   '313 333 1923']
+            ],
+            search: true
+          });
+        </script>
+      </div>
     </div>
     <div style="width:500px">
-      <div id="chart3"></div>
+      <div id="chart3">
+        
+      </div>
     </div>
     <div style="width:500px">
-      <div id="chart4"></div>
+      <div id="chart4">
+        
+      </div>
     </div>
   </div> 
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> <!-- Apex Charts -->
-    <script src="https://cdn.jsdelivr.net/npm/gridjs@1.2.0/dist/gridjs.umd.js"></script> <!-- Grid JS -->
-
-
-  <script>
-    const gridContainer = document.getElementById('chart2');
-    const grid = new gridjs.Grid({
-      columns: ['Name', 'Email', 'Phone Number'],
-      data: [
-        ['John', 'john@example.com', '(353) 01 222 3333'],
-        ['Mark', 'mark@gmail.com', '(01) 22 888 4444']
-      ]
-    });
-
-    // Render the grid inside the 'chart2' div
-    gridContainer.appendChild(grid.render());
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script> <!-- Grid JS -->
 
  <script>
     const chartContainer = document.getElementById('chart');
