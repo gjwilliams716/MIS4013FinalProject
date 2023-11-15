@@ -43,18 +43,19 @@
     <div style="width:500px">
       <div id="chart2">
           <script>
-        const gridmo = document.getElementById('chart2');
-          new Grid({
+         const gridmo = new Grid({
             data: [
-              ['John', 'john@example.com', '(353) 01 222 3333'],
-              ['Mark', 'mark@gmail.com',   '(01) 22 888 4444'],
-              ['Eoin', 'eo3n@yahoo.com',   '(05) 10 878 5554'],
-              ['Nisen', 'nis900@gmail.com',   '313 333 1923']
+                ['John', 'john@example.com', '(353) 01 222 3333'],
+                ['Mark', 'mark@gmail.com', '(01) 22 888 4444'],
+                ['Eoin', 'eo3n@yahoo.com', '(05) 10 878 5554'],
+                ['Nisen', 'nis900@gmail.com', '313 333 1923']
             ],
             search: true
-          });
-              const chart2Div = document.getElementById('chart2');
-            chart2Div.appendChild(gridmo.container);
+        });
+
+        // Assuming you want to append the grid to the div with id "chart2"
+        const chart2Div = document.getElementById('chart2');
+        chart2Div.appendChild(gridmo.container);
         </script>
       </div>  
     </div>
