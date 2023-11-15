@@ -30,6 +30,31 @@
     <!-- NEW CODE HW 6 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+<!-- NEW CODE HW 6 -->
+    
+
 
 <p>Enter values in the boxes to multiply 2 numbers:</p>
 <input type="number" id="inputP1" placeholder="Enter p1">
