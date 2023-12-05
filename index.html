@@ -134,7 +134,7 @@ Ah yes, the Colorado Buffalos. First in fanfare, first in celebrity VIPS on the 
         .then(data => {
             // Extract player names and total tackles from the data
             const playerNames = data.map(entry => entry.name);
-            const totalTackles = data.map(entry => entry.y);
+            const totalTackles = data.map(entry => entry.tot);
 
             // Create the bar chart
             const ctx = document.getElementById('myBarChart').getContext('2d');
