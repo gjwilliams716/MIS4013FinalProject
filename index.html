@@ -122,11 +122,7 @@ Ah yes, the Colorado Buffalos. First in fanfare, first in celebrity VIPS on the 
       <div id="chart"></div>
     </div>
   </div> 
-
-    <div style="width:800px">
-      <div id="table-container"></div>  
-    </div>
-
+        
     <div id="library4"></div>
       
     <script>
@@ -194,26 +190,6 @@ Ah yes, the Colorado Buffalos. First in fanfare, first in celebrity VIPS on the 
             }]
         }]
     });
-</script>
-
-  <script>
-    // Sample data
-    const data = [
-        { Name: 'John Doe', Phone: '123-456-7890', Email: 'john@example.com' },
-        { Name: 'Jane Doe', Phone: '987-654-3210', Email: 'jane@example.com' },
-        { Name: 'Bob Smith', Phone: '555-123-4567', Email: 'bob@example.com' },
-        { Name: 'Alice Johnson', Phone: '444-567-8901', Email: 'alice@example.com' }
-        // Add more data as needed
-    ];
-
-    // Define columns
-    const columns = ['Name', 'Phone', 'Email'];
-
-    // Create the grid
-    new gridjs.Grid({
-        columns: columns.map(col => ({ name: col, id: col.toLowerCase() })),
-        data: data
-    }).render(document.getElementById('table-container'));
 </script>
 
  <script>
