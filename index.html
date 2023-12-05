@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MIS 4013 Final Project</title>
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> <!-- Apex Charts -->
@@ -13,170 +13,281 @@
     <script src="https://code.highcharts.com/highcharts.js"></script> <!-- High Charts -->
     <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator.min.css" rel="stylesheet"> <!-- Tabulator -->
     <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> <!-- Tabulator -->
+  </head>
+  <body style="margin-top:10px;">
+    <h1 style="margin-left:10px; margin-top:10px; font-family:arial; font-weight:bold">MIS 4013 Final Project</h1>
+    <h1 style="margin-left:10px; font-size:20px">Parker McGowan and Griffin Williams</h1>
+ 
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Homepage</a> <!--add link to other pages in href, last li is disabled -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page2.html">Page 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page3.html">Page 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page4.html">Page 4</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="page5.html">Page 5</a>
+          </li>
+      </ul> 
 
-</head>
-<body style="margin-top:10px;">
-
-<h1 style="margin-left:10px; margin-top:10px; font-family:arial; font-weight:bold">MIS 4013 Final Project</h1>
-<h1 style="margin-left:10px; font-size:20px">Parker McGowan and Griffin Williams</h1>
-
-<ul class="nav">
-    <li class="nav-item">
-        <a class="nav-link active" href="index.html">Homepage</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="page2.html">Page 2</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="page3.html">Page 3</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="page4.html">Page 4</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="page5.html">Page 5</a>
-    </li>
-</ul>
-
-<div id="bod1" style="display:flex; flex-direction:row;">
+    <div id="bod1" style="display:flex; flex-direction:row;">
     <div style="margin-left:10px; width:800px;">
-
-        <!-- Project Overview -->
-
-        <div class="alert alert-danger" role="alert">
-            <div style="font-family:arial">
-                <strong>Project Overview:</strong>
-                <div style="margin-top:10px;">This project revolves around the development of a dynamic and visually engaging website dedicated to showcasing the defensive statistics of the University of Oklahoma football team. Leveraging HTML and CSS for the front-end, and PHP scripting for seamless integration with a MySQL database, the website aims to provide an intuitive and informative user experience.
-                    The primary goal of this project is to provide fans, analysts, and enthusiasts with a centralized platform to explore and analyze the defensive performance of the University of Oklahoma football team. In conclusion, we want to see where it all went wrong this year.
-                </div>
-            </div>
+      
+      <div class="alert alert-danger" role="alert">
+      <div style="font-family:arial">
+        <strong>Project Overview:</strong>
+        <div style="margin-top:10px;">This project revolves around the development of a dynamic and visually engaging website dedicated to showcasing the defensive statistics of the University of Oklahoma football team. Leveraging HTML and CSS for the front-end, and PHP scripting for seamless integration with a MySQL database, the website aims to provide an intuitive and informative user experience.
+        The primary goal of this project is to provide fans, analysts, and enthusiasts with a centralized platform to explore and analyze the defensive performance of the University of Oklahoma football team. In conclusion, we want to see where it all went wrong this year.
         </div>
-
-        <!-- Interesting 2023 CFB Statistics -->
-
-        <div style="margin-top:10px; font-weight:bold;">Interesting 2023 CFB Statistics Through the Halfway Mark:</div>
-
-        <div class="accordion" id="accordionExample">
-            <!-- ... (unchanged) -->
-        </div>
-
-        <!-- Highcharts Pie Chart -->
-
-        <div>
-            <div style="display: flex; flex-direction:row; width:800px;">
-                <div style="width:400px">
-                    <div id="library4"></div>
-                </div>
-                <div style="width:400px">
-                    <div id="chart"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Chart.js Bar Chart -->
-
-        <div style="width:600px;">
-            <canvas id="myChart"></canvas>
-        </div>
-
-        <!-- jQuery AJAX for Highcharts Pie Chart -->
-
-        <script>
-            var chartConfig = {
-                chart: {
-                    type: 'pie',
-                    align: 'left'
-                },
-                title: {
-                    text: 'Departamental Strength of the Company',
-                    align: 'left'
-                },
-                subtitle: {
-                    text: 'Custom animation of pie series',
-                    align: 'left'
-                },
-                tooltip: {
-                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                },
-                accessibility: {
-                    point: {
-                        valueSuffix: '%'
-                    }
-                },
-                plotOptions: {
-                    pie: {
-                        allowPointSelect: true,
-                        borderWidth: 2,
-                        cursor: 'pointer',
-                        dataLabels: {
-                            enabled: true,
-                            format: '<b>{point.name}</b><br>{point.percentage}%',
-                            distance: 20
-                        }
-                    }
-                },
-                series: [{
-                    enableMouseTracking: false,
-                    animation: {
-                        duration: 2000
-                    },
-                    colorByPoint: true,
-                    data: []
-                }]
-            };
-
-            $.ajax({
-                url: 'path/to/your/php/script.php',
-                dataType: 'json',
-                success: function (data) {
-                    chartConfig.series[0].data = data;
-                    var chart = Highcharts.chart('library4', chartConfig);
-                },
-                error: function (error) {
-                    console.error('Error fetching data:', error);
-                }
-            });
-        </script>
-
-        <!-- Apexcharts Treemap Chart -->
-
-        <script>
-            const chartContainer = document.getElementById('chart');
-            var options = {
-                // ... (unchanged)
-            };
-
-            var chart = new ApexCharts(document.querySelector("#chart"), options);
-            chart.render();
-        </script>
-
-        <!-- Chart.js Bar Chart -->
-
-        <script>
-            const ctx = document.getElementById('myChart');
-
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        </script>
+      </div>
+  </div>
+      
+    <div style="margin-top:10px; font-weight:bold;">Interesting 2023 CFB Statistics Through the Halfway Mark:</div>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Lincoln Riley at USC
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       USC has given up 40 points to three consecutive opponents while being ranked in the Associated Press top-10. Only three teams have ever done that in the 88-year history of the AP poll. Sometimes it might not matter how many touchdown passes Williams throws.
+      </div>
     </div>
-</div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Unfortunate OU Statistic
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Oklahoma showed up in four of the first six College Football Playoffs but — as every card-carrying member of Sooner Nation knows — has missed the past three. But the current defense has allowed an offensive touchdown in only six of 24 quarters this season, and if that keeps up, January might be more fun.
+      </div>
+    </div>
+      </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Portal QB's
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        What do USC’s Caleb Williams, LSU’s Jayden Daniels, Colorado’s Shedeur Sanders, Washington’s Michael Penix Jr., Notre Dame’s Sam Hartman, Oregon’s Bo Nix, Oklahoma’s Dillon Gabriel, Georgia Tech’s Haynes King and Maryland’s Taulia Tagovailoa have in common? They are nine of the top 11 national leaders in touchdown passes, combining for 169 scoring strikes. They also are all transfers who once played quarterback for another school.
+      </div>
+    </div>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        Air Force Passing Statistics
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+How can a team named Air Force throw only 28 passes in six games? No matter, the Falcons won them all and are now No. 22 in the AP poll. They have 468 passing yards for the entire season. Colorado’s Sanders had 510 his first FBS game against TCU.      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        The Prime Effect
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+Ah yes, the Colorado Buffalos. First in fanfare, first in celebrity VIPS on the sideline, first in individual passing yards with Sanders . . . but 123rd in the nation in points allowed. The defensive average is 35.9 points a game, which is 11 points more than Michigan, Penn State and Ohio State combined. Some of the defensive meltdowns have been breathtaking: A blown 29-0 lead against Stanford, 35 points allowed in the first half by Oregon, 34 in the first half by USC.      </div>
+      </div>
+      </div>
+  <div><a href="https://www.ncaa.com/news/football/article/2023-10-17/20-compelling-stats-note-halfway-through-college-football-season" target="_blank" style="margin-top:10px;">Source</div>
+      </div>
+    </div>
+
+      <div><div style="display: flex; flex-direction:row; width:800px;">
+    <div style="width:400px">
+      <div id="library4"></div>
+    </div>
+    <div style="width:400px">
+      <div id="chart"></div>
+    </div>
+  </div> 
+        
+   <div style="width:600px;">
+     <canvas id="myChart"></canvas>
+   </div>
+        
+    <script>
+    // Your existing code for pie chart animation
+    (function (H) {
+        H.seriesTypes.pie.prototype.animate = function (init) {
+            // ... (unchanged)
+        };
+    }(Highcharts));
+
+    // Create the pie chart
+    Highcharts.chart('library4', {
+        chart: {
+            type: 'pie',
+            align: 'left'
+        },
+        title: {
+            text: 'Departamental Strength of the Company',
+            align: 'left'
+        },
+        subtitle: {
+            text: 'Custom animation of pie series',
+            align: 'left'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                borderWidth: 2,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b><br>{point.percentage}%',
+                    distance: 20
+                }
+            }
+        },
+        series: [{
+            enableMouseTracking: false,
+            animation: {
+                duration: 2000
+            },
+            colorByPoint: true,
+            data: [{
+                name: 'Customer Support',
+                y: 21.3
+            }, {
+                name: 'Development',
+                y: 18.7
+            }, {
+                name: 'Sales',
+                y: 20.2
+            }, {
+                name: 'Marketing',
+                y: 14.2
+            }, {
+                name: 'Other',
+                y: 25.6
+            }]
+        }]
+    });
+</script>
+
+ <script>
+    const chartContainer = document.getElementById('chart');
+    var options = {
+          series: [
+          {
+            name: 'Desktops',
+            data: [
+              {
+                x: 'ABC',
+                y: 10
+              },
+              {
+                x: 'DEF',
+                y: 60
+              },
+              {
+                x: 'XYZ',
+                y: 41
+              }
+            ]
+          },
+          {
+            name: 'Mobile',
+            data: [
+              {
+                x: 'ABCD',
+                y: 10
+              },
+              {
+                x: 'DEFG',
+                y: 20
+              },
+              {
+                x: 'WXYZ',
+                y: 51
+              },
+              {
+                x: 'PQR',
+                y: 30
+              },
+              {
+                x: 'MNO',
+                y: 20
+              },
+              {
+                x: 'CDE',
+                y: 30
+              }
+            ]
+          }
+        ],
+          legend: {
+          show: false
+        },
+        chart: {
+          height: 350,
+          type: 'treemap'
+        },
+        title: {
+          text: 'Multi-dimensional Treemap',
+          align: 'center'
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+</script>
+    
+    <script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script></div>
+      
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 </html>
