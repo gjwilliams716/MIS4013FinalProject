@@ -106,7 +106,215 @@ Ah yes, the Colorado Buffalos. First in fanfare, first in celebrity VIPS on the 
       </div>
     </div>
 
-      <div>RIGHT SIDDE</div>
+      <div><div style="display: flex; flex-direction:row">
+    <div style="width:500px">
+      <canvas id="myChart"></canvas>
+    </div>
+    <div style="width:500px">
+      <div id="chart"></div>
+    </div>
+  </div> 
+
+    <div style="width:1000px">
+      <div id="table-container"></div>  
+    </div>
+
+    <div id="library4"></div>
+    <div id="library5"></div>
+
+    <script>
+    var table = new Tabulator("#library5", {
+    height:"311px",
+    responsiveLayout:"hide",
+    columns:[
+    {title:"Name", field:"name", width:200, responsive:0}, //never hide this column
+    {title:"Progress", field:"progress", hozAlign:"right", sorter:"number", width:150},
+    {title:"Gender", field:"gender", width:150, responsive:2}, //hide this column first
+    {title:"Rating", field:"rating", hozAlign:"center", width:150},
+    {title:"Favourite Color", field:"col", width:150},
+    {title:"Date Of Birth", field:"dob", hozAlign:"center", sorter:"date", width:150},
+    {title:"Driver", field:"car", hozAlign:"center", width:150},
+    ],
+});
+    </script>
+      
+    <script>
+    // Your existing code for pie chart animation
+    (function (H) {
+        H.seriesTypes.pie.prototype.animate = function (init) {
+            // ... (unchanged)
+        };
+    }(Highcharts));
+
+    // Create the pie chart
+    Highcharts.chart('library4', {
+        chart: {
+            type: 'pie'
+        },
+        title: {
+            text: 'Departamental Strength of the Company',
+            align: 'left'
+        },
+        subtitle: {
+            text: 'Custom animation of pie series',
+            align: 'left'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                borderWidth: 2,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b><br>{point.percentage}%',
+                    distance: 20
+                }
+            }
+        },
+        series: [{
+            enableMouseTracking: false,
+            animation: {
+                duration: 2000
+            },
+            colorByPoint: true,
+            data: [{
+                name: 'Customer Support',
+                y: 21.3
+            }, {
+                name: 'Development',
+                y: 18.7
+            }, {
+                name: 'Sales',
+                y: 20.2
+            }, {
+                name: 'Marketing',
+                y: 14.2
+            }, {
+                name: 'Other',
+                y: 25.6
+            }]
+        }]
+    });
+</script>
+
+  <script>
+    // Sample data
+    const data = [
+        { Name: 'John Doe', Phone: '123-456-7890', Email: 'john@example.com' },
+        { Name: 'Jane Doe', Phone: '987-654-3210', Email: 'jane@example.com' },
+        { Name: 'Bob Smith', Phone: '555-123-4567', Email: 'bob@example.com' },
+        { Name: 'Alice Johnson', Phone: '444-567-8901', Email: 'alice@example.com' }
+        // Add more data as needed
+    ];
+
+    // Define columns
+    const columns = ['Name', 'Phone', 'Email'];
+
+    // Create the grid
+    new gridjs.Grid({
+        columns: columns.map(col => ({ name: col, id: col.toLowerCase() })),
+        data: data
+    }).render(document.getElementById('table-container'));
+</script>
+
+ <script>
+    const chartContainer = document.getElementById('chart');
+    var options = {
+          series: [
+          {
+            name: 'Desktops',
+            data: [
+              {
+                x: 'ABC',
+                y: 10
+              },
+              {
+                x: 'DEF',
+                y: 60
+              },
+              {
+                x: 'XYZ',
+                y: 41
+              }
+            ]
+          },
+          {
+            name: 'Mobile',
+            data: [
+              {
+                x: 'ABCD',
+                y: 10
+              },
+              {
+                x: 'DEFG',
+                y: 20
+              },
+              {
+                x: 'WXYZ',
+                y: 51
+              },
+              {
+                x: 'PQR',
+                y: 30
+              },
+              {
+                x: 'MNO',
+                y: 20
+              },
+              {
+                x: 'CDE',
+                y: 30
+              }
+            ]
+          }
+        ],
+          legend: {
+          show: false
+        },
+        chart: {
+          height: 350,
+          type: 'treemap'
+        },
+        title: {
+          text: 'Multi-dimensional Treemap',
+          align: 'center'
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+</script>
+    
+    <script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script></div>
       
     </div>
     
