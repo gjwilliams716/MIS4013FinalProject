@@ -116,7 +116,7 @@ Ah yes, the Colorado Buffalos. First in fanfare, first in celebrity VIPS on the 
 
       <div><div style="display: flex; flex-direction:row; width:800px;">
     <div style="width:400px">
-      <div id="library4"></div>
+      <div id="myBarChart"></div>
     </div>
     <div style="width:400px">
       <div id="chart"></div>
@@ -127,74 +127,40 @@ Ah yes, the Colorado Buffalos. First in fanfare, first in celebrity VIPS on the 
      <canvas id="myChart"></canvas>
    </div>
         
-    <script>
-    // Your existing code for pie chart animation
-    (function (H) {
-        H.seriesTypes.pie.prototype.animate = function (init) {
-            // ... (unchanged)
-        };
-    }(Highcharts));
+   <script>
+    // Fetch data from GitHub using AJAX
+    fetch('https://raw.githubusercontent.com/gjwilliams716/MIS4013FinalProject/main/get-tackles.php')
+        .then(response => response.json())
+        .then(data => {
+            // Extract player names and total tackles from the data
+            const playerNames = data.map(entry => entry.name);
+            const totalTackles = data.map(entry => entry.y);
 
-    // Create the pie chart
-    Highcharts.chart('library4', {
-        chart: {
-            type: 'pie',
-            align: 'left'
-        },
-        title: {
-            text: 'Departamental Strength of the Company',
-            align: 'left'
-        },
-        subtitle: {
-            text: 'Custom animation of pie series',
-            align: 'left'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        accessibility: {
-            point: {
-                valueSuffix: '%'
-            }
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                borderWidth: 2,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b><br>{point.percentage}%',
-                    distance: 20
+            // Create the bar chart
+            const ctx = document.getElementById('myBarChart').getContext('2d');
+            const myBarChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: playerNames,
+                    datasets: [{
+                        label: 'Total Tackles',
+                        data: totalTackles,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
                 }
-            }
-        },
-        series: [{
-            enableMouseTracking: false,
-            animation: {
-                duration: 2000
-            },
-            colorByPoint: true,
-            data: [{
-                name: 'Customer Support',
-                y: 21.3
-            }, {
-                name: 'Development',
-                y: 18.7
-            }, {
-                name: 'Sales',
-                y: 20.2
-            }, {
-                name: 'Marketing',
-                y: 14.2
-            }, {
-                name: 'Other',
-                y: 25.6
-            }]
-        }]
-    });
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
 </script>
-
  <script>
     const chartContainer = document.getElementById('chart');
     var options = {
