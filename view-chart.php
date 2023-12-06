@@ -14,9 +14,12 @@
   </style>
 </head>
 <body>
-  <h1 style="font-weight: bold;">2023 Oklahoma Football Sack Leaders</h1>
-  <canvas id="barChart" width="1000px" height="200"></canvas>
-
+  <h1 style="font-weight: bold; margin-left:10px;">2023 Oklahoma Football Sack Leaders</h1>
+  
+  <div style="text-align:left;">
+    <canvas id="barChart" width="1000px" height="200"></canvas>
+  </div>
+    
   <?php
   // Assuming $oudtbl is your result set
   $labels = [];
