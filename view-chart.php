@@ -23,7 +23,7 @@ $oudtbl = selectChart();
 <body>
   
   <div style="float:left; margin-left:10px">
-    <canvas id="barChart" width="1000px" height="200"></canvas>
+    <canvas id="barChart" width="800px" height="200"></canvas>
   </div>
     
   <?php
