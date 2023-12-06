@@ -1,19 +1,19 @@
-<h1> OUDTBL </h1>
+<h1 style="font-weight:bold;">2023 Oklahoma Football Defensive Statistics</h1>
 <div class = "table-responsive">
 <table class="table">
 <thead>
   <tr>
     <th>Rk</th>
     <th>Player</th>
-    <th>G</th>
-    <th>Solo</th>
-    <th>Ast</th>
-    <th>Tot</th>
-    <th>Loss</th>
-    <th>Sk</th>
-    <th>inte</th>
-    <th>fr</th>
-    <th>ff</th>
+    <th>Games Played</th>
+    <th>Solo Tackles</th>
+    <th>Assisted Tackles</th>
+    <th>Total Tackles</th>
+    <th>Tackles For Loss</th>
+    <th>Sack</th>
+    <th>Interceptions</th>
+    <th>Fumble Recoveries</th>
+    <th>Forced Fumbles</th>
   </tr>
 </thead>
 <tbody>
