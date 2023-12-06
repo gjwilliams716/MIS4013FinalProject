@@ -16,7 +16,7 @@ $chart2Data = selectChart2(); // Call the function to get data for the second ch
 <?php
 include "view-chart.php";
 ?>
-  <h1 style="font-weight: bold; margin-left:10px;">2023 Oklahoma Football Fumble Leaders</h1>
+  <h1 style="font-weight: bold; margin-left:10px; font-size:34px;">2023 Oklahoma Football Fumble Leaders</h1>
 </div>
 <?php
 
