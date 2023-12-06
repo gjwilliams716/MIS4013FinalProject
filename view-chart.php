@@ -16,7 +16,7 @@
 <body>
   <h1 style="font-weight: bold; margin-left:10px;">2023 Oklahoma Football Sack Leaders</h1>
   
-  <div style="float:left;">
+  <div style="float:left; margin-left:10px">
     <canvas id="barChart" width="1000px" height="200"></canvas>
   </div>
     
