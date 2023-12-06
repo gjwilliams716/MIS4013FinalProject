@@ -17,7 +17,7 @@
   <?php
   $players = [];
   $sacks = [];
-  while ($oudtbls = $oudtbl->fetch_assoc()) {
+  while ($oudtbls = $selectChart->fetch_assoc()) {
     $players[] = $oudtbls['player'];
     $sacks[] = $oudtbls['sk'];
   }
