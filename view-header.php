@@ -7,21 +7,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <div class = "container">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+     <div id="topo" style="height:100px; background-image:URL(https://images.squarespace-cdn.com/content/v1/5b99b818620b8562c2caa34a/1541298742511-AHQQITXDKMJ9ZURXLVCK/Monthly-Website-Header-background.jpg?format=2500w); background-position:center;">
+    <div style="font-family:arial; font-size:30px; font-weight:bold; text-align:center; color:white;">MIS 4013 Final Project</div>
+
+    <div id="navi" style="display: flex; justify-content: center; align-items:center; margin-bottom:10px;">
+    <ul class="nav">
+        <li class="nav-item" style="margin-right: 10px;">
+          <button type="button" class="btn btn-secondary btn-sm"><a class="nav-link active" style="color:white; font-size: 75%; font-weight:bold;" href="index.html">Homepage</a></button>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="oudtbl.php">OUDTBL</a>
+          <button type="button" class="btn btn-secondary btn-sm"><a class="nav-link" style="color:white; font-size: 75%; font-weight:bold;" href="oudtbl.php">More Statistics</a></button>
         </li>
+    </ul>
+    </div>
+   </div>
     
         
       </ul>
