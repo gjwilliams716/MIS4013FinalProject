@@ -17,7 +17,7 @@
   <h1 style="font-weight: bold; margin-left:10px;">2023 Oklahoma Football Fumble Leaders</h1>
   
   <div style="float:left; margin-left:10px">
-    <canvas id="barChart" width="1000px" height="200"></canvas>
+    <canvas id="barChart2" width="1000px" height="200"></canvas>
   </div>
     
   <?php
@@ -37,8 +37,8 @@
     var data = <?php echo json_encode($data); ?>;
 
     // Create a bar chart using Chart.js
-    var ctx = document.getElementById('barChart').getContext('2d');
-    var myChart = new Chart(ctx, {
+    var ctx2 = document.getElementById('barChart2').getContext('2d');
+    var myChart2 = new Chart(ctx2, {
       type: 'bar',
       data: {
         labels: labels,
