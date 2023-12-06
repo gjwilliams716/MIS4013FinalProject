@@ -1,5 +1,5 @@
 <?php
-function selectOudtbl() {
+function selectChart() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT player, sk FROM `oudtbl`");
