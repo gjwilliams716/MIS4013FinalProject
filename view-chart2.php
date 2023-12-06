@@ -1,3 +1,10 @@
+<?php
+// Assuming you have a function named selectChart to fetch data
+$oudtbl = selectChart2();
+
+// Rest of your code remains the same
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
