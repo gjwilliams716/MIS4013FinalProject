@@ -11,7 +11,7 @@ $oudtbl = selectChart();
 $chart2Data = selectChart2(); // Call the function to get data for the second chart
 
 ?>
-<div style="display:flex; flex-direction:column;">
+<div style="display:flex; flex-direction:column; float:left;">
   <h1 style="font-weight: bold; margin-left:10px;">2023 Oklahoma Football Sack Leaders</h1>
 <?php
 include "view-chart.php";
