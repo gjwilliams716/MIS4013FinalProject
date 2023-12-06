@@ -18,20 +18,20 @@
 </thead>
 <tbody>
   <?php
-while ($oudtbl = $oudtbl->fetch_assoc()) {
+while ($oudtbls = $oudtbl->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $oudtbl['rk']; ?></td>
-  <td><?php echo $oudtbl['player']; ?></td>
-    <td><?php echo $oudtbl['g']; ?></td>
-    <td><?php echo $oudtbl['solo']; ?></td>
-    <td><?php echo $oudtbl['ast']; ?></td>
-    <td><?php echo $oudtbl['tot']; ?></td>
-    <td><?php echo $oudtbl['loss']; ?></td>
-    <td><?php echo $oudtbl['sk']; ?></td>
-    <td><?php echo $oudtbl['inte']; ?></td>
-    <td><?php echo $oudtbl['fr']; ?></td>
-    <td><?php echo $oudtbl['ff']; ?></td>
+    <td><?php echo $oudtbls['rk']; ?></td>
+  <td><?php echo $oudtbls['player']; ?></td>
+    <td><?php echo $oudtbls['g']; ?></td>
+    <td><?php echo $oudtbls['solo']; ?></td>
+    <td><?php echo $oudtbls['ast']; ?></td>
+    <td><?php echo $oudtbls['tot']; ?></td>
+    <td><?php echo $oudtbls['loss']; ?></td>
+    <td><?php echo $oudtbls['sk']; ?></td>
+    <td><?php echo $oudtbls['inte']; ?></td>
+    <td><?php echo $oudtbls['fr']; ?></td>
+    <td><?php echo $oudtbls['ff']; ?></td>
   </tr>
   <?php
 }
