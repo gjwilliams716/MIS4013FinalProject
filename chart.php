@@ -6,7 +6,7 @@ $pageTitle = "oudtbl";
 include "view-header.php";
 $oudtbl = selectChart();
 include "view-chart.php";
-$oudtbl2 = SelectChart2();
+$oudtbl2 = selectChart2();
 include "view-chart2.php";
 include "view-footer.php";
 ?>
