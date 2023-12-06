@@ -1,7 +1,7 @@
 <?php
 function get_db_connection(){
     // Create connection
-    $conn = new mysqli('159.89.47.44', 'admin', 'FinalProject4013', 'willmiso_finalproject');
+    $conn = new mysqli('159.89.47.44', 'willmiso_admin', 'FinalProject4013', 'willmiso_finalproject');
     
     // Check connection
     if ($conn->connect_error) {
