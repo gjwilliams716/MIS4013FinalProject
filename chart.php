@@ -4,7 +4,7 @@ require_once("model-chart.php");
 
 $pageTitle = "oudtbl";
 include "view-header.php";
-$oudtbl = selectOudtbl();
+$oudtbl = selectChart();
 include "view-chart.php";
 include "view-footer.php";
 ?>
