@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1 style="font-weight: bold;">2023 Oklahoma Football Sack Leaders</h1>
-  <canvas id="barChart" width="400" height="200"></canvas>
+  <canvas id="barChart" width="1000px" height="200"></canvas>
 
   <?php
   // Assuming $oudtbl is your result set
@@ -40,7 +40,7 @@
       data: {
         labels: labels,
         datasets: [{
-          label: 'Sack',
+          label: 'Sacks',
           data: data,
           backgroundColor: 'rgba(75, 192, 192, 0.2)',
           borderColor: 'rgba(75, 192, 192, 1)',
