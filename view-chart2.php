@@ -21,7 +21,6 @@ $oudtbl = selectChart2();
   </style>
 </head>
 <body>
-  <div style="font-weight: bold; margin-left:10px;">2023 Oklahoma Football Fumble Leaders</div>
   
   <div style="float:left; margin-left:10px">
     <canvas id="barChart2" width="1000px" height="200"></canvas>
