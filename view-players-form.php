@@ -23,7 +23,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="post" action="">
+        <form method="post" action= "">
           <div class="mb-3">
             <label for="playerName" class="form-label">Player Name</label>
             <input type="text" class="form-control" id="playerName" name="player">
@@ -31,6 +31,39 @@
           <div class="mb-3">
             <label for="gamesPlayed" class="form-label">Games Played</label>
             <input type="text" class="form-control" id="gamesPlayed" name="g">
+          </div>
+          <!-- Add the new fields below -->
+          <div class="mb-3">
+            <label for="solo" class="form-label">Solo Tackles</label>
+            <input type="text" class="form-control" id="solo" name="solo">
+          </div>
+          <div class="mb-3">
+            <label for="ast" class="form-label">Assisted Tackles</label>
+            <input type="text" class="form-control" id="ast" name="ast">
+          </div>
+          <div class="mb-3">
+            <label for="tot" class="form-label">Total Tackles</label>
+            <input type="text" class="form-control" id="tot" name="tot">
+          </div>
+          <div class="mb-3">
+            <label for="loss" class="form-label">Tackles for Loss</label>
+            <input type="text" class="form-control" id="loss" name="loss">
+          </div>
+          <div class="mb-3">
+            <label for="sk" class="form-label">Sacks</label>
+            <input type="text" class="form-control" id="sk" name="sk">
+          </div>
+          <div class="mb-3">
+            <label for="inte" class="form-label">Interceptions</label>
+            <input type="text" class="form-control" id="inte" name="inte">
+          </div>
+          <div class="mb-3">
+            <label for="fr" class="form-label">Fumble Recoveries</label>
+            <input type="text" class="form-control" id="fr" name="fr">
+          </div>
+          <div class="mb-3">
+            <label for="ff" class="form-label">Forced Fumbles</label>
+            <input type="text" class="form-control" id="ff" name="ff">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
