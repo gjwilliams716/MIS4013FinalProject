@@ -25,12 +25,12 @@
       <div class="modal-body">
         <form method="post" action= "">
           <div class="mb-3">
-            <label for="playerName" class="form-label">Player Name</label>
-            <input type="text" class="form-control" id="playerName" name="player">
+            <label for="player" class="form-label">Player Name</label>
+            <input type="text" class="form-control" id="player" name="player">
           </div>
           <div class="mb-3">
-            <label for="gamesPlayed" class="form-label">Games Played</label>
-            <input type="text" class="form-control" id="gamesPlayed" name="g">
+            <label for="g" class="form-label">Games Played</label>
+            <input type="text" class="form-control" id="g" name="g">
           </div>
           <!-- Add the new fields below -->
           <div class="mb-3">
