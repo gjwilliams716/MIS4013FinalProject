@@ -1,8 +1,13 @@
-<?php
+<div class="row">
+<div class="col">
+  <h1 style="font-weight:bold;">2023 Oklahoma Football Defensive Statistics</h1>
+</div>
+<div class="col-auto">
+  <?php
 include "view-players-form.php";
 ?>
+</div>
 
-<h1 style="font-weight:bold;">2023 Oklahoma Football Defensive Statistics</h1>
 <div class = "table-responsive">
 <table class="table">
 <thead>
