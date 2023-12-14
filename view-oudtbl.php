@@ -1,3 +1,7 @@
+<?php
+include "view-players-form.php";
+?>
+
 <h1 style="font-weight:bold;">2023 Oklahoma Football Defensive Statistics</h1>
 <div class = "table-responsive">
 <table class="table">
