@@ -65,6 +65,7 @@
             <label for="ff" class="form-label">Forced Fumbles</label>
             <input type="text" class="form-control" id="ff" name="ff">
           </div>
+          <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
