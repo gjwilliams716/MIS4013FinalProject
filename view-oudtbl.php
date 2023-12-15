@@ -51,7 +51,7 @@ while ($oudtbls = $oudtbl->fetch_assoc()) {
     </td>
   </tr>
     </td>
-    <td>
+    
    
   <?php
 }
