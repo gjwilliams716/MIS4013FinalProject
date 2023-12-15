@@ -33,7 +33,7 @@ while ($oudtbls = $oudtbl->fetch_assoc()) {
   ?>
   <tr>
     <td><?php echo $oudtbls['rk']; ?></td>
-  <td><?php echo $oudtbls['player']; ?></td>
+    <td><?php echo $oudtbls['player']; ?></td>
     <td><?php echo $oudtbls['g']; ?></td>
     <td><?php echo $oudtbls['solo']; ?></td>
     <td><?php echo $oudtbls['ast']; ?></td>
@@ -50,7 +50,7 @@ while ($oudtbls = $oudtbl->fetch_assoc()) {
         <?php include "view-players-deleteform.php"; ?>
     </td>
   </tr>
-    </td>
+    
     
    
   <?php
