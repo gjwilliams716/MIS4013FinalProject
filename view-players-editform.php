@@ -6,29 +6,30 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editKeeperModal<?php echo $keeper['keeper_id']; ?>" tabindex="-1" aria-labelledby="editKeeperModalLabel<?php echo $keeper['keeper_id']; ?>" aria-hidden="true">
+<div class="modal fade" id="editKeeperModal<?php echo $outbl['player']; ?>" tabindex="-1" aria-labelledby="editKeeperModalLabel<?php echo $outbl['player']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editKeeperlModalLabel<?php echo $keeper['keeper_id']; ?>">Edit Keeper</h1>
+        <h1 class="modal-title fs-5" id="edit
+         lModalLabel<?php echo $outbl['player']; ?>">Edit Player</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method ="post" action="">
   <div class="mb-3">
-    <label for="kFirst<?php echo $keeper['keeper_id']; ?>" class="form-label">Keeper first name</label>
-    <input type="text" class="form-control" id="kFirst<?php echo $keeper['keeper_id']; ?>" name="kFirst" value="<?php echo $keeper['first_name']; ?>">
+    <label for="pFirst<?php echo $outbl['player']; ?>" class="form-label">Player first name</label>
+    <input type="text" class="form-control" id="pFirst<?php echo $outbl['player']; ?>" name="pFirst" value="<?php echo $outbl['first_name']; ?>">
   </div>
 <div class="mb-3">
-    <label for="kLast<?php echo $keeper['keeper_id']; ?>" class="form-label">Keeper last name</label>
-    <input type="text" class="form-control" id="kLast<?php echo $keeper['keeper_id']; ?>" name="kLast" value="<?php echo $keeper['last_name']; ?>">
+    <label for="kLast<?php echo $outbl['player']; ?>" class="form-label">player last name</label>
+    <input type="text" class="form-control" id="kLast<?php echo $outbl['player']; ?>" name="pLast" value="<?php echo $keeper['last_name']; ?>">
   </div>
           <div class="mb-3">
-    <label for="kContact<?php echo $keeper['keeper_id']; ?>" class="form-label">Contact</label>
-    <input type="text" class="form-control" id="kContact<?php echo $keeper['keeper_id']; ?>" name="kContact" value="<?php echo $keeper['contact']; ?>">
+    <label for="kContact<?php echo $keeper['player']; ?>" class="form-label">Contact</label>
+    <input type="text" class="form-control" id="pContact<?php echo $outbl['player']; ?>" name="pContact" value="<?php echo $outbl['contact']; ?>">
   </div>
       
-   <input type="hidden" name="kid" value="<?php echo $keeper['keeper_id']; ?>">
+   <input type="hidden" name="kid" value="<?php echo $outbl['keeper_id']; ?>">
    <input type="hidden" name="actionType" value="Edit">      
   <button type="submit" class="btn btn-primary">Save</button>
 </form>
