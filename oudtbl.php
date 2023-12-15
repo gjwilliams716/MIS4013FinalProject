@@ -11,7 +11,7 @@ if (isset($_POST['actionType'])) {
             if (addPlayer($_POST['player'], $_POST['g'], $_POST['solo'], $_POST['ast'], $_POST['tot'], $_POST['loss'], $_POST['sk'], $_POST['inte'], $_POST['fr'], $_POST['ff'])) {
                 echo '<div class="alert alert-success" role="alert">Player added.</div>';
             } else {
-                echo '<div class="alert alert-danger" role="alert">Error.</div>';
+                echo '<div class="alert alert-danger" role="alert">Error when adding player.</div>';
             }
             break;
         
@@ -19,15 +19,15 @@ if (isset($_POST['actionType'])) {
             if (updatePlayer($_POST['player'], $_POST['g'], $_POST['solo'], $_POST['ast'], $_POST['tot'], $_POST['loss'], $_POST['sk'], $_POST['inte'], $_POST['fr'], $_POST['ff'])) {
                 echo '<div class="alert alert-success" role="alert">Player edited.</div>';
             } else {
-                echo '<div class="alert alert-danger" role="alert">Error.</div>';
+                echo '<div class="alert alert-danger" role="alert">Error when editing playing.</div>';
             }
             break;
 
         case "Delete":
-            if (deletePlayer($_POST['player'])) {
+            if (deletePlayer($_POST['rk'])) {
                 echo '<div class="alert alert-success" role="alert">Player deleted.</div>';
             } else {
-                echo '<div class="alert alert-danger" role="alert">Error.</div>';
+                echo '<div class="alert alert-danger" role="alert">Error when deleting.</div>';
             }
             break;
     }
