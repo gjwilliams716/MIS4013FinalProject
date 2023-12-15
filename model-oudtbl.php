@@ -44,11 +44,11 @@ function editPlayer($playerName, $g, $solo, $ast, $tot, $loss, $sk, $inte, $fr, 
 }
 
 // Function to delete a player from the database
-function deletePlayer($player) {
+function deletePlayer($rk) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM `oudtbl` WHERE player=?");
-        $stmt->bind_param("s", $player);
+        $stmt = $conn->prepare("DELETE FROM `oudtbl` WHERE rk=?");
+        $stmt->bind_param("i", $rk);
         $stmt->execute();
         $conn->close();
     } catch (Exception $e) {
