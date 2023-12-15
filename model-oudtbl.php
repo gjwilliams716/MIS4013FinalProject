@@ -47,13 +47,26 @@ function editPlayer($playerName, $g, $solo, $ast, $tot, $loss, $sk, $inte, $fr, 
 function deletePlayer($rk) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM `oudtbl` WHERE rk=?");
-        $stmt->bind_param("i", $rk);
-        $stmt->execute();
-        $conn->close();
+        
+        // Adjust the DELETE query based on your database schema
+        $stmt = $conn->prepare("DELETE FROM oudtbl WHERE rk = ?");
+        $stmt->bind_param("s", $rk);
+
+        if ($stmt->execute()) {
+            // Deletion successful
+            $stmt->close();
+            $conn->close();
+            return true;
+        } else {
+            // Error during deletion
+            $stmt->close();
+            $conn->close();
+            return false;
+        }
     } catch (Exception $e) {
+        // Exception handling if something goes wrong
         $conn->close();
-        throw $e;
+        return false;
     }
 }
 
