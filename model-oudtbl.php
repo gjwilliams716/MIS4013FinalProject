@@ -30,11 +30,11 @@ function addPlayer($player, $g, $solo, $ast, $tot, $loss, $sk, $inte, $fr, $ff) 
 }
 
 // Function to edit an existing player in the database
-function editPlayer($playerName, $g, $solo, $ast, $tot, $loss, $sk, $inte, $fr, $ff) {
+function editPlayer($rk, $player, $g, $solo, $ast, $tot, $loss, $sk, $inte, $fr, $ff) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `oudtbl` SET g=?, solo=?, ast=?, tot=?, loss=?, sk=?, inte=?, fr=?, ff=? WHERE player=?");
-        $stmt->bind_param("iiiddiiiss", $g, $solo, $ast, $tot, $loss, $sk, $inte, $fr, $ff, $playerName);
+        $stmt = $conn->prepare("UPDATE `oudtbl` SET g=?, solo=?, ast=?, tot=?, loss=?, sk=?, inte=?, fr=?, ff=? WHERE rk=?");
+        $stmt->bind_param("siiiddiiii", $player, $g, $solo, $ast, $tot, $loss, $sk, $inte, $fr, $ff);
         $stmt->execute();
         $conn->close();
     } catch (Exception $e) {
