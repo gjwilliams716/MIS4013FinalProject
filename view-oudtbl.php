@@ -23,6 +23,8 @@ include "view-players-form.php";
     <th>Interceptions</th>
     <th>Fumble Recoveries</th>
     <th>Forced Fumbles</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
 </thead>
 <tbody>
@@ -43,6 +45,9 @@ while ($oudtbls = $oudtbl->fetch_assoc()) {
     <td><?php echo $oudtbls['ff']; ?></td>
     <td>
         <?php include "view-players-editform.php"; ?>
+    </td>
+    <td>
+        <?php include "view-players-deleteform.php"; ?>
     </td>
   </tr>
     </td>
