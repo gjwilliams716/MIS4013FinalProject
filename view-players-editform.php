@@ -6,11 +6,11 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editKeeperModal<?php echo $outbl['player']; ?>" tabindex="-1" aria-labelledby="editKeeperModalLabel<?php echo $outbl['player']; ?>" aria-hidden="true">
+<div class="modal fade" id="editOutblModal<?php echo $outbl['player']; ?>" tabindex="-1" aria-labelledby="editOutblModalLabel<?php echo $outbl['player']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="edit
+        <h1 class="modal-title fs-5" id="editOutblModalLabel<?php echo $keeper['keeper_id']; ?>">Edit Keeper</h1>
          lModalLabel<?php echo $outbl['player']; ?>">Edit Player</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
