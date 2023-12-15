@@ -41,10 +41,10 @@ while ($oudtbls = $oudtbl->fetch_assoc()) {
     <td><?php echo $oudtbls['inte']; ?></td>
     <td><?php echo $oudtbls['fr']; ?></td>
     <td><?php echo $oudtbls['ff']; ?></td>
+    <td>
+        <?php include "view-players-editform.php"; ?>
+    </td>
   </tr>
-  <?php
-  include "view-players-editform.php";
-?>
     </td>
     <td>
       <form method="post" action="">
